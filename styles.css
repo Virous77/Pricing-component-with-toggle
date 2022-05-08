@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 2.5rem;
+  height: 1.2rem;
+  background: hsl(236, 72%, 79%);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 1.8px;
+  right: 3.5px;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #c2cae5;
+}
+
+input:checked + label:after {
+  right: calc(50% - -1px);
+  transform: translateX(-1%);
+}
+
+label:active:after {
+  width: 15px;
+}
+
+section {
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: hsl(240, 20%, 95%);
+  background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: 12rem;
+  background-position: top right, bottom left;
+  padding-bottom: 3rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+header h1 {
+  color: hsl(233, 13%, 49%);
+  font-size: 1.3rem;
+}
+
+.plan {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.dark-input {
+  display: flex;
+  align-items: center;
+}
+
+.plan-info {
+  display: flex;
+  align-items: center;
+}
+
+.monthly {
+  margin-left: 1rem;
+  color: hsl(233, 13%, 49%);
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.annually {
+  opacity: 0.7;
+  margin-right: 1rem;
+  color: hsl(233, 13%, 49%);
+  font-size: 0.7rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-conta {
+  text-align: center;
+}
+
+.price {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.low {
+  margin-right: 0.1rem;
+}
+
+.first-conta p {
+  margin-top: 0.5rem;
+}
+
+.border-line {
+  border-bottom: 1px solid hsl(233, 13%, 49%);
+  opacity: 0.2;
+}
+
+button {
+  padding: 10px 4rem;
+  border: none;
+  margin-top: 1.5rem;
+}
+
+.table {
+  background-color: white;
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+}
+
+.center {
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+
+  padding: 3rem 1rem;
+  border-radius: 5px;
+}
+
+.first-button {
+  background-color: hsl(236, 72%, 79%);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.5rem;
+  border-radius: 4px;
+}
+
+.center-button {
+  background-color: hsl(240, 33%, 99%);
+  color: hsl(236, 72%, 79%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.5rem;
+  border-radius: 4px;
+}
+
+.first-info {
+  color: hsl(232, 13%, 33%);
+  font-size: 0.65rem;
+}
+
+.center-info {
+  color: white;
+  font-size: 0.65rem;
+}
+
+.price h1 {
+  font-size: 2rem;
+  color: hsl(232, 13%, 33%);
+}
+
+.center-head h1 {
+  color: white;
+  opacity: 1;
+}
+
+.center-head .low {
+  color: white;
+}
+
+.first-plan {
+  color: hsl(232, 13%, 33%);
+  font-size: 0.8rem;
+}
+
+.second-plan {
+  color: white;
+  font-size: 0.8;
+}
+
+@media (max-width: 960px) {
+  section {
+    margin: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  main {
+    flex-direction: column;
+  }
+  .first-conta {
+    margin-top: 2rem;
+    width: 60%;
+  }
+
+  .center {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .first-conta {
+    width: 80%;
+  }
+}
